@@ -24,7 +24,7 @@ export class ClientesListaComponent implements OnInit {
       .subscribe(response => this.clientes = response);
   }
   novoCadastro(){
-    this.router.navigate(['/clientes-form'])
+    this.router.navigate(['/clientes/form'])
   }
 
   preparaDelecao(cliente: Cliente){
