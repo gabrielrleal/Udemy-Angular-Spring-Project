@@ -15,6 +15,7 @@ export class ClientesService {
   constructor(private http: HttpClient) { }
 
   salvar(cliente: Cliente): Observable<Cliente> {
+  
     return this.http.post<Cliente>(`${this.apiURL}`, cliente); // url , objeto a ser mandado
   }
 

@@ -34,14 +34,25 @@
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Listar Serviços
                 </a> -->
-
-                
-
             </div>
+            <div class="sb-sidenav-menu-heading">Clientes</div>
+
+            <a class="nav-link collapsed" routerLink="/clientes" data-toggle="collapse"
+                data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Clientes
+            </a>
         </div>
+        <div class="sb-sidenav-menu-heading">Log Out</div>
+            <a class="nav-link collapsed" (click)="logout();" href="#" data-toggle="collapse"
+                    data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                    <div class="sb-nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+                    Sair
+            </a>
+
         <div class="sb-sidenav-footer">
             <div class="small">Logged in as:</div>
-            Start Bootstrap
+            {{usuarioLogado}}
         </div>
     </nav>
 </div>

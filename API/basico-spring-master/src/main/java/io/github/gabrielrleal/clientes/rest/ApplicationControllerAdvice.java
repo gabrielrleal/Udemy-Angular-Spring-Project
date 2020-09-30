@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.server.ResponseStatusException;
-
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 @RestControllerAdvice
 public class ApplicationControllerAdvice {
 
-    @ExceptionHandler
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ApiErrors handleValidationErrors(MethodArgumentNotValidException ex){
         BindingResult bindingResult = ex.getBindingResult();
@@ -29,7 +29,7 @@ public class ApplicationControllerAdvice {
     }
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity handleResponseStatusException(ResponseStatusException ex){
-        String mensagemErro = ex.getMessage();
+        String mensagemErro = ex.getReason();
         HttpStatus codigoStatus = ex.getStatus();
         ApiErrors apiErrors = new ApiErrors(mensagemErro);
         return new ResponseEntity(apiErrors,codigoStatus);
