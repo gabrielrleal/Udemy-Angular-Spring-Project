@@ -1,5 +1,5 @@
 # Udemy Angular Spring Project
-Aplicação que faz cadastro de clientes e serviços prestados
+Aplicação que faz cadastro de clientes e serviços prestados, fazendo uso da autenticação OAUTH2 
 
 ## Tecnologias utilizadas
 
