@@ -1,13 +1,11 @@
 # Udemy Angular Spring Project
-Aplicação que faz cadastro de clientes e serviços prestados, fazendo uso da autenticação OAUTH2 
+Application that registers customers and services provided  
 
-## Tecnologias utilizadas
+## Used Tech
 
-### Backend
 - [SpringBoot](https://spring.io/projects/spring-boot)
+- [OAUTH2](https://oauth.net/2/)
 
-
-### Frontend
 
 - [Angular](https://angular.io/)
 - [Bootstrap](https://getbootstrap.com/)
